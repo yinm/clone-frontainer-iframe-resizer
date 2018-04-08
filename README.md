@@ -1,1 +1,1 @@
-# clone-frontainer-iframe-resizer
+Clone [frontainer/iframe-resizer: クロスドメインでもiframeの中身の高さに合わせてiframeの高さを揃えるライブラリ](https://github.com/frontainer/iframe-resizer) for study
