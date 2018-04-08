@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo</title>
+</head>
+<body>
+  <iframe src="frames/content.html" frameborder="0" id="test" style="width: 300px; height: 150px;" class="iframe-resize"></iframe>
+  <script src="../FrameReceiver.js"></script>
+  <script>
+    document.body.addEventListener('click', function(e) {
+      FrameReceiver.send()
+    })
+  </script>
+</body>
+</html>
