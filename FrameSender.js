@@ -14,11 +14,16 @@
      * @param data
      */
     receive(data) {
+      console.log('child:', parent)
+
       const target = parent.postMessage
         ? parent
         : (parent.document.postMessage)
           ? parent.document
           : undefined
+
+      console.log('child:', target)
+      console.log('child:', document.body.offsetHeight)
 
       if (typeof target !== 'undefined' && document.body.offsetHeight) {
         target.postMessage({

@@ -24,9 +24,17 @@
 
   FrameReceiver.prototype = {
     send() {
+      console.log('parent:' ,this.selector)
+
       const iframes = document.querySelectorAll(this.selector)
+
+      console.log('parent:' ,iframes)
+
       for (let i = 0, len = iframes.length; i < len; i++) {
         let iframe = iframes[i]
+
+        console.log('parent:' ,iframe.id)
+
         this.sendMessage(iframe)
         if (iframe.id) {
           iframe.addEventListener('load', this._checkLoadHandler)
@@ -46,6 +54,8 @@
      * @param data
      */
     receive(data) {
+      console.log('parent:' ,data)
+
       if (!data.id || isNaN(data.height)) return
       const iframe = document.getElementById(data.id)
       iframe.style.height = `${data.height}px`
