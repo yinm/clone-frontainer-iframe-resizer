@@ -35,4 +35,4 @@
   }
 
   window.FrameSender =  new FrameSender()
-})
+})()

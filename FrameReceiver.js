@@ -58,4 +58,4 @@
   }
 
   window.FrameReceiver = new FrameReceiver()
-})
+})()
